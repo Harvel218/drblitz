@@ -1,0 +1,36 @@
+.hamburger-container {
+    height: 16px;
+    width: 24px;
+    display: block;
+    position: relative;
+
+    @media (min-width: $tablet) {
+        display: none;
+    }
+
+    &__hamburger {
+        top: 50%;
+        display: block;
+        margin-top: -1.5px;
+
+        &:after {
+            top: -7px;
+            display: block;
+            content: '';
+        }
+
+        &:before {
+            top: 7px;
+            display: block;
+            content: '';
+        }
+    }
+    &__hamburger,
+    &__hamburger:after,
+    &__hamburger:before {
+        position: absolute;
+        width: 24px;
+        height: 3px;
+        background-color: #ffffff;
+    }
+}
